@@ -19,6 +19,7 @@ function App() {
                                 <div className="col-lg-6 col-xl-5 py-lg-5">
                                     <div className="p-4 p-md-5">
 
+                                        <h1><span id="main"></span><span>/10000</span></h1>
                                         <div className="h2 fw-bolder">Article heading goes here</div>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique delectus ab doloremque, qui doloribus ea officiis...</p>
                                         <BuyForm/>
