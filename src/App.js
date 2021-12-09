@@ -1,43 +1,104 @@
-import './css/App.css';
-import {Wallet} from "./components/wallet";
-import {BuyForm} from "./components/buyForm";
+import { Wallet } from "./components/wallet";
+import { BuyForm } from "./components/buyForm";
+import { useState } from "react";
 
 function App() {
+
+    const [open, setOpen] = useState(false);
+    
+    function switchOpen() {
+        if (!open)
+            setOpen(true);
+        else setOpen(false);
+ 
+    }
+
   return (
-    <div className="App" >
-        <body className="d-flex flex-column custom-body">
+    <div className="App">
+      <div className="d-flex flex-column">
+        <div className="navbar">
+          <div id="menu-content" style={ open ? { height:'100%'} : {height : '0%'} } >
+            <div className="close" onClick={ () => switchOpen()} id="hamburgerclose">
+              X
+            </div>
+            <ul id="navlinks" style={{ listStyle: "none" }} className="links">
+              <li onClick={ () => switchOpen()} id="home">
+                <a className="link" href="https://drakeland.io/">
+                  Home
+                </a>
+              </li>
+              <li onClick={ () => switchOpen()} id="roadmap">
+                <a className="link" href="#roadmap-sec">
+                  RoadMap
+                </a>
+              </li>
+              <li onClick={ () => switchOpen()} id="about">
+                <a className="link" href="#about-sec">
+                  About
+                </a>
+              </li>
+              <li onClick={ () => switchOpen()} id="social">
+                <a className="link" href="#social-sec">
+                  Social
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div onClick={ () => switchOpen()}  className="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+
         <main className="flex-shrink-0">
+          <h1 className="title"> DrakeLand </h1>
 
-
-            <section className="py-5">
-                <div className="container px-5">
-                    <h1 className="fw-bolder fs-5 mb-4" style = {{color: "white"}}>Drake Land</h1>
-                    <Wallet/>
-                    <div className="card border-0 shadow rounded-3 overflow-hidden">
-                        <div className="card-body p-0">
-                            <div className="row gx-0">
-                                <div className="col-lg-6 col-xl-5 py-lg-5">
-                                    <div className="p-4 p-md-5">
-
-                                        <h1><span id="main"></span><span>/10000</span></h1>
-                                        <div className="h2 fw-bolder">Article heading goes here</div>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique delectus ab doloremque, qui doloribus ea officiis...</p>
-                                        <BuyForm/>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 col-xl-7"><div className="bg-featured-blog" style={{background: "url('https://dummyimage.com/700x350/343a40/6c757d')"}}></div></div>
-                            </div>
-                        </div>
-                    </div>
+          <section className="py-5">
+            <div className="cont-all">
+              <div className="mint-card">
+                <div className="text">
+                  <h1 style={{ color: "#3835e4", fontSize: "2em" }}>
+                    <span id="main"></span>
+                    <span>/3,800</span>
+                  </h1>
+                  <div style={{ fontWeight: "bold", fontSize: "1.8em" }}>
+                    Get Your DrakeLand Egg!
+                  </div>
+                  <p>Connect your wallet to enable minting</p>
+                  <Wallet />
+                  <BuyForm />
                 </div>
-            </section>
+
+                <div className="image-gif "></div>
+              </div>
+            </div>
+          </section>
         </main>
 
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
-        </body>
-        <p className="customFooter">@DrakeLand</p>
+        <footer className="text-white" id="social-sec">
+          <div className="social">
+            <a
+              style={{ color: "white" }}
+              href="https://discord.gg/tCQYJ7wQuE"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="fab fa-discord"></i>
+            </a>
+            <a
+              style={{ color: "white" }}
+              href="https://twitter.com/DrakeLandNFT"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="fab fa-twitter"></i>
+            </a>
+          </div>
+          <div style={{ marginBottom: "40px" }}>
+            <h1 style={{ fontSize: "2em" }}>Copyright DrakeLand™</h1>
+            <h2 style={{ fontSize: "1.2em" }}>Made by Aurora & Rage</h2>
+          </div>
+        </footer>
+      </div>
     </div>
   );
 }

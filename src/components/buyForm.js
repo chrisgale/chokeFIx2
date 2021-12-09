@@ -22,17 +22,18 @@ export const BuyForm = () => {
     const handleBuySubmit = async () => {
 
         contract.setProvider(web3.givenProvider)
-        const value = amount * .01
+        const value = amount * .08
         const transactionValue = utils.parseUnits(value.toString())
+        const gasAmount = amount * 300000
 
-        return contract.methods.userMint(amount).send({from: account, value: transactionValue})
+        return contract.methods.mint(amount).send({from: account, value: transactionValue, gas: gasAmount})
 
     }
 
     return (
         <div>
-            <input onChange={handleInputChange} className="text-center me-3" id="inputQuantity" type="num" style={{maxWidth: "100px"}}/>
-            <button onClick={handleBuySubmit} className="button-14-copy">Hatch</button>
+            <input onChange={handleInputChange} placeholder="enter a number" className="text-box" id="inputQuantity" type="num" style={{maxWidth: "100px"}}/>
+            <button onClick={handleBuySubmit} className="mint-but">Mint</button>
         </div>
     )
 

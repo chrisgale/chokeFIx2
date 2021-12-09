@@ -7,7 +7,7 @@ import { DAppProvider, ChainId} from '@usedapp/core';
 
 
 ReactDOM.render(
-  <DAppProvider config={{supportedChains: [ChainId.Rinkeby]}}>
+  <DAppProvider config={{supportedChains: [ChainId.Mainnet]}}>
     <App />
   </DAppProvider>,
   document.getElementById('root')

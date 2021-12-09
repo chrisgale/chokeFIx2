@@ -10,7 +10,7 @@ export const Wallet = () => {
         const main = document.getElementById("main");
 
 
-    const totalsupply = fetch('https://deep-index.moralis.io/api/v2/0xe4E8974FE1311C71ef326D95363068a87F942713?chain=rinkeby',
+    const totalsupply = fetch('https://deep-index.moralis.io/api/v2/0x65419b412Fb36aC725463Ae58F95e84a078f39b8?chain=eth',
      {headers: {'X-API-Key': 'T7d37JqEbexjZRNh2S1uuDRmEvW6f7hmipNPyKrp6P4paJU6G35vuecqMHR0K21A'}})
     totalsupply.then((response) => {return response.json();}).then((total) => {const value = total.total; main.innerHTML = value;});
 
@@ -23,12 +23,12 @@ export const Wallet = () => {
 
         <div className="mintButton">
           {isConnected ? (
-                    <button  className="button-14-copy" href="#header" style = {{color: "black", background: "white"}} onClick={deactivate}>
-                        disconnect
+                    <button  className="mint-but" href="#header" onClick={deactivate}>
+                        Disconnect
                     </button>
                     ) : (
-                        <button  className="button-14-copy" href="#header" style = {{color: "black", background: "white"}} onClick={handleActiveSubmit}>
-                        connect
+                        <button  className="mint-but" href="#header"  onClick={handleActiveSubmit}>
+                        Connect
                         </button>
                     )
                 }
