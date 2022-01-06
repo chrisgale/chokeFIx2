@@ -10,7 +10,9 @@ export const UsersNodes = () => {
 
   const [items, setItems] = useState([]);
 
-  const setUserItems = async () => {
+
+  useEffect(() => {
+    const setUserItems = async () => {
     const web3 = new Web3(Web3.givenProvider);
     const contract = new web3.eth.Contract(NODE_ABI, NODE_ADDRESS);
     contract.setProvider(web3.givenProvider);
@@ -39,7 +41,6 @@ export const UsersNodes = () => {
     }
     setItems(newitems);
   };
-  useEffect(() => {
     if (account) {
       setUserItems();
     }

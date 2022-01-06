@@ -1,7 +1,6 @@
 import './style.scss';
 import { Container, Row, Col } from 'react-bootstrap';
-// components
-import MCard from '../../Molecules/m-card';
+
 // icons
 import MFaq from '../../Molecules/m-faq';
 

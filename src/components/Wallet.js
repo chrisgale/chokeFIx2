@@ -1,7 +1,6 @@
 import { useEthers } from '@usedapp/core'
 import React from "react"
-import {NODE_ABI, NODE_ADDRESS} from "../nodeManageConfig.js";
-import Web3 from "web3"
+
 import "../button.css";
 
 
@@ -15,12 +14,6 @@ export const Wallet = () => {
 
     const handleActiveSubmit = async () => {
         activateBrowserWallet()
-
-
-
-        const web3 = new Web3(Web3.givenProvider)
-
-
     }
 
     return (

@@ -1,6 +1,5 @@
 import './style.scss';
-import { Card, Button } from 'react-bootstrap';
-import {Buy} from "../../buy.js";
+import { Card} from 'react-bootstrap';
 
 function MCard({ title, content, button}) {
 

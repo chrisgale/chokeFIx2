@@ -5,13 +5,16 @@ import { NODE_ABI, NODE_ADDRESS } from "../nodeManageConfig.js";
 import Web3 from "web3";
 import ONumbers from "./Organism/o-numbers";
 import "./Organism/o-numbers/style.scss";
-import { Container, Row, Col } from "react-bootstrap";
+
 
 export const UsersNumbers = () => {
   const { account } = useEthers();
   const [stats, setStats] = useState([]);
 
-  const setUserStats = async () => {
+
+
+  useEffect(() => {
+    const setUserStats = async () => {
     const web3 = new Web3(Web3.givenProvider);
     const contract = new web3.eth.Contract(CONTRACT_ABI, CONTRACT_ADDRESS);
     contract.setProvider(web3.givenProvider);
@@ -24,9 +27,9 @@ export const UsersNumbers = () => {
 
     const totalNodes = await contract.methods.getTotalCreatedNodes().call();
 
-    const nodePrice = await contract.methods.getRewardPerNode().call();
 
-    const totalRewards = nodePrice * numberOfNodes;
+
+
     const nodesRewardsAvailable = await node_contract.methods
       ._getNodesRewardAvailable(account)
       .call();
@@ -44,7 +47,6 @@ export const UsersNumbers = () => {
 
     setStats(newitems);
   };
-  useEffect(() => {
     if (account) {
       setUserStats();
     }

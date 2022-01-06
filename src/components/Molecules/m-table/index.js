@@ -1,5 +1,5 @@
 import './style.scss';
-import { Button, Container, Row, Col, Table } from 'react-bootstrap';
+import { Container, Row, Col, Table } from 'react-bootstrap';
 import {SoloClaim} from "../../soloClaim.js";
 
 function MTable({ title, items }) {

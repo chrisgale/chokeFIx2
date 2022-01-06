@@ -1,11 +1,6 @@
 import './style.scss';
 import { Container, Row, Col } from 'react-bootstrap';
-// components
-import MCard from '../../Molecules/m-card';
-// icons
-import { BsFillExclamationTriangleFill } from "react-icons/bs";
-import MUsefulData from '../../Molecules/m-useful-data';
-import MTable from '../../Molecules/m-table';
+
 
 function OWhatNow() {
 

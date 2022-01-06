@@ -1,7 +1,5 @@
 import './style.scss';
-import { Container, Navbar, NavDropdown, Nav } from 'react-bootstrap';
-
-import { BsFillPersonFill } from "react-icons/bs";
+import { Container, Navbar} from 'react-bootstrap';
 import {Wallet} from "../../Wallet.js"
 import {Approve} from "../../approve.js"
 
@@ -10,7 +8,7 @@ function OHeader() {
     <Navbar className='MHeader'>
         <Container>
             <Navbar.Brand href="/">
-              <img className='logo' src={'./assets/img/logo.png'} />
+              <img className='logo' src={'./assets/img/logo.png'} alt="logo"/>
             </Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">

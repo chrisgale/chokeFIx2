@@ -1,7 +1,7 @@
 import {CONTRACT_ADDRESS, CONTRACT_ABI} from "../config.js";
 import Web3 from "web3"
 import { useEthers } from '@usedapp/core'
-import { Button, Container, Row, Col, Table } from 'react-bootstrap';
+import { Button} from 'react-bootstrap';
 
 
 
