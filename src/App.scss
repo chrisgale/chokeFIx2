@@ -1,0 +1,17 @@
+/* make the customizations */
+$theme-colors: ("primary": #fff);
+
+@import "~bootstrap/scss/bootstrap";
+
+/* make the customizations */
+:root {
+  --app-primary-color: #24324b;
+  --app-secondary-color: #19243b;
+  --app-background-color: #071226;
+  --app-primary-text-color: white;
+  --app-secondary-text-color: #6a6e74;
+}
+
+body {
+  background-color: var(--app-background-color);
+}

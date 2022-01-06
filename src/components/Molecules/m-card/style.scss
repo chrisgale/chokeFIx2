@@ -1,0 +1,39 @@
+.m-card {
+    background: none;
+    color: white;
+
+    .card-title {
+        font-size: 1.3rem;
+        font-weight: 800;
+    }
+
+    .card-body {
+        font-size: 0.9rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        background-color: #24324b;
+        height: 120px;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 25px;
+    }
+
+    button {
+        background: none;
+        text-transform: uppercase;
+        border-radius: 50px;
+        font-size: 0.6rem;
+        color: #fff;
+        border-color: #fff;
+        font-weight: 800;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .card {
+        margin-bottom: 30px;
+    }
+}

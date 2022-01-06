@@ -1,0 +1,70 @@
+.m-table {
+    color: white;
+    height: 100%;
+
+    .title {
+        background-color: var(--app-primary-color);
+        font-size: 1.3rem;
+        font-weight: 800;
+        padding: 20px 0 50px 0;
+        border-radius: 25px 25px 0 0;
+    }
+
+    .content {
+        background-color: var(--app-secondary-color);
+        border-radius: 25px;
+        margin-top: -30px;
+        padding: 30px 0;
+        font-size: 0.9rem;
+        font-weight: 800;
+        height: calc(100% - 70px);
+
+        table,
+        tr,
+        th,
+        tbody,
+        td {
+            border: none;
+        }
+
+        table {
+            border: none;
+
+            th,
+            td {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            tr:nth-child(2n) {
+                background: var(--app-primary-color)
+            }
+
+            th {
+                color: var(--app-primary-text-color);
+                font-weight: 800;
+            }
+
+            td {
+                color: var(--app-secondary-text-color);
+            }
+
+            .claim-node {
+                font-size: 0.7rem;
+                font-weight: 800;
+                padding: 4px 14px;
+                border: 1px solid #fff;
+                border-radius: 25px;
+                color: white;
+                background: none;
+                cursor: pointer;
+            }
+
+            .claim-node:hover {
+                color: #000;
+                background-color: white;
+                border-color: white;
+            }
+        }
+    }
+}

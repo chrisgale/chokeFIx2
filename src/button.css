@@ -1,0 +1,10 @@
+.mint-but {
+    background: none;
+        text-transform: uppercase;
+        border-radius: 50px;
+        font-size: 0.6rem;
+        color: #fff;
+        border-color: #fff;
+        font-weight: 800;
+
+}
