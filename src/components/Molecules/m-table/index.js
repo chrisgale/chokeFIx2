@@ -7,7 +7,7 @@ function MTable({ title, items }) {
     const nodes = items.map( item => (
                                         <tr key={item.id}>
                                             <td>{ item.title }</td>
-                                            <td align="center">{ item.date }</td>
+                                            <td align="center">{ item.formattedDate }</td>
                                             <td align="center">{ item.rewards }</td>
                                             <td align="right">
                                             <SoloClaim CreationTime={item.date}/>

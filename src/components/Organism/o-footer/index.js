@@ -28,7 +28,7 @@ function OFooter() {
             </Row>
             <Row>
                 <Col className='text-center copy'>
-                    <span>2021 Copyright CRONODES.financial</span>
+                    <span>2021 Copyright CRONODES.xyz</span>
                 </Col>
             </Row>
         </Container>
