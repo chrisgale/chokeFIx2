@@ -7,7 +7,7 @@ function OStillHelp() {
         <Container className='o-still-help'>
             <Row>
                 <Col className='text-center'>
-                    <h2>Still Need Answers?</h2>
+                    <h2>Need Answers?</h2>
                 </Col>
             </Row>
             <Row>
