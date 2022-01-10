@@ -53,7 +53,7 @@ function ONumbers({stats}) {
             <Row className='disclaimer'>
                 <Col className='d-flex justify-content-center'>
                     <BsFillExclamationTriangleFill />
-                    <p>Verify you are at https://cronodes.xyz</p>
+                    <p>Verify you are at https://cronodes.app</p>
                     <BsFillExclamationTriangleFill />
                 </Col>
             </Row>

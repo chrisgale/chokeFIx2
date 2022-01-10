@@ -22,13 +22,11 @@ function OFooter() {
                 </Col>
             </Row>
             <Row>
-                <Col className='text-center'>
-                    <a href="/#" target={'_blank'}>Disclaimer</a> | <a href="/#" target={'_blank'}>Docs</a> | <a href="/#" target={'_blank'}>Contact</a>
-                </Col>
+
             </Row>
             <Row>
                 <Col className='text-center copy'>
-                    <span>2021 Copyright CRONODES.xyz</span>
+                    <span>2021 Copyright CRONODES.app</span>
                 </Col>
             </Row>
         </Container>
