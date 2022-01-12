@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import { DAppProvider} from '@usedapp/core';
 
 ReactDOM.render(
-  <DAppProvider config={{supportedChains: [25, 338]}}>
+  <DAppProvider config={{supportedChains: [25]}}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
