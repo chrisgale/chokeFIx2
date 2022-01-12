@@ -43,7 +43,7 @@ export const UsersNumbers = () => {
 
     newitems.push(String(numberOfNodes));
     newitems.push(String(totalNodes));
-    newitems.push(String(sum));
+    newitems.push(String(Web3.utils.fromWei(String(sum), "ether")));
 
     setStats(newitems);
   };
