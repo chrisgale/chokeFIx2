@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
-import { DAppProvider, ChainId} from '@usedapp/core';
+import { DAppProvider} from '@usedapp/core';
 
 ReactDOM.render(
-  <DAppProvider config={{supportedChains: [ChainId.Rinkeby, 338]}}>
+  <DAppProvider config={{supportedChains: [25, 338]}}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
