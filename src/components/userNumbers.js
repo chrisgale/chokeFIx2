@@ -28,22 +28,13 @@ export const UsersNumbers = () => {
     const totalNodes = await contract.methods.getTotalCreatedNodes().call();
 
 
+    const rewards = numberOfNodes * 1;
 
 
-    const nodesRewardsAvailable = await node_contract.methods
-      ._getNodesRewardAvailable(account)
-      .call();
-
-    const rewards = nodesRewardsAvailable.split("#");
-
-    var sum = 0
-    for (let i = 0; i < rewards.length; i++) {
-        sum += Number(rewards[i]);
-    }
 
     newitems.push(String(numberOfNodes));
     newitems.push(String(totalNodes));
-    newitems.push(String(Web3.utils.fromWei(String(sum), "ether")));
+    newitems.push(String(rewards));
 
     setStats(newitems);
   };

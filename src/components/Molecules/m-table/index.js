@@ -1,6 +1,5 @@
 import './style.scss';
 import { Container, Row, Col, Table } from 'react-bootstrap';
-import {SoloClaim} from "../../soloClaim.js";
 
 function MTable({ title, items }) {
 
@@ -8,9 +7,9 @@ function MTable({ title, items }) {
                                         <tr key={item.id}>
                                             <td>{ item.title }</td>
                                             <td align="center">{ item.formattedDate }</td>
-                                            <td align="center">{ item.rewards }</td>
+                                            <td align="center">{ 1 }</td>
                                             <td align="right">
-                                            <SoloClaim CreationTime={item.date}/>
+
                                             </td>
                                         </tr>
                                     )
@@ -31,7 +30,7 @@ function MTable({ title, items }) {
                             <tr>
                                 <th>Node</th>
                                 <th className="text-center">Date Created</th>
-                                <th className="text-center">Rewards</th>
+                                <th className="text-center">Rewards Per Day</th>
                                 <th></th>
                             </tr>
                         </thead>

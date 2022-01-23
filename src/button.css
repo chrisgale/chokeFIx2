@@ -1,10 +1,102 @@
+/*------------------------------------------------------------------------*/
+/* Main Button Style*/
 .mint-but {
+    background: white;
+        text-transform: uppercase;
+        border-radius: 50px;
+        font-size: 12px;
+        color: #071226;
+        border-color: #fff;
+        border-style: solid;
+        border-width:3px;
+        font-weight:800;
+        height:30px;
+        width:90px;
+}
+.mint-but:hover {
     background: none;
         text-transform: uppercase;
         border-radius: 50px;
-        font-size: 0.6rem;
+        font-size: 12px;
         color: #fff;
         border-color: #fff;
-        font-weight: 800;
-
+        border-style: solid;
+        border-width:3px;
+        font-weight:800;
+        height:30px;
+        width:90px;
 }
+
+/*------------------------------------------------------------------------*/
+/* Buy Button Main Style */
+.mint-but2{
+    background: none;
+    text-transform: uppercase;
+    border-radius: 50px;
+    font-size: 12px;
+    color: #fff;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 3px;
+    font-weight: 800;
+    height: 30px;
+    width: 60px;
+}
+
+/*------------------------------------------------------------------------*/
+/* Claim Button Main Style */
+.mint-but3{
+    background: #fff;
+    text-transform: uppercase;
+    border-radius: 50px;
+    font-size: 12px;
+    color: #071226;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 3px;
+    font-weight: 800;
+    height: 30px;
+    width: 90px;
+}
+
+
+/*------------------------------------------------------------------------*/
+/* Node Name Input Field Style */
+#inputQuantity{
+background:none;
+color:#fff;
+padding-left: 10px;
+width:200px;
+outline: none;
+}
+::placeholder{
+color:#777777;
+}
+
+/*------------------------------------------------------------------------*/
+/* Buy Buton Styles overriding .Class styles */
+#buyNodeBtn{
+    background:#fff;
+    color:#071226;
+    margin-left: 9px;
+    font-size: 12px;
+    }
+    #buyNodeBtn:hover{
+        background:none;
+        color:#fff;
+        margin-left: 9px;
+        font-size: 12px;
+        }
+
+/*------------------------------------------------------------------------*/
+/* Claim Button Styles overriding .Class styles */
+        #myClaimBtn{
+            background:#fff;
+            color:#071226;
+            font-size: 12px;
+            }
+            #myClaimBtn:hover{
+                background:none;
+                color:#fff;
+                font-size: 12px;
+                }

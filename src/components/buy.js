@@ -45,8 +45,8 @@ export const Buy = () => {
 
     return (
         <div>
-            <input onChange={handleInputChange} placeholder="name" className="mint-but" id="inputQuantity" type="text" style={{maxWidth: "100px", margin: 10}}/>
-            <button onClick={handleBuySubmit} className="">Buy Node</button>
+            <input onChange={handleInputChange} placeholder="node name" className="mint-but" id="inputQuantity" type="text" minLength={5} maxLength={20} style={{ minWidth: "100px", maxWidth: "150px", marginTop: 0, color: "white"}}/>
+            <button onClick={handleBuySubmit} id="buyNodeBtn" className="mint-but2">Buy</button>
         </div>
     )
 }

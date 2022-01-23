@@ -10,15 +10,16 @@ function OFooter() {
         <Container className='o-footer'>
             <Row>
                 <Col className='text-center logos'>
-                    <a href="/#" target={'_blank'}>
+                    <a href="https://www.cronodes.xyz/">
                         <img className='logo' src={'./assets/img/logo.png'} alt="Cronode logo"/>
+                        <a href="https://discord.gg/cronodesofficial">
+                        <BsDiscord size={16} />
                     </a>
-                    <a href="/#" target={'_blank'}>
-                        <FaTwitter size={24} />
                     </a>
-                    <a href="/#" target={'_blank'}>
-                        <BsDiscord size={24} />
+                    <a href="https://twitter.com/CronodesFinance">
+                        <FaTwitter size={16} />
                     </a>
+                    
                 </Col>
             </Row>
             <Row>
@@ -26,7 +27,7 @@ function OFooter() {
             </Row>
             <Row>
                 <Col className='text-center copy'>
-                    <span>2021 Copyright CRONODES.app</span>
+                    <span>© Copyright 2022 Cronodes. All rights reserved.</span>
                 </Col>
             </Row>
         </Container>

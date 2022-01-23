@@ -12,6 +12,7 @@ function OHeader() {
             </Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">
+              
                 <div className="user-metamask">
                     <Approve/>
                 </div>

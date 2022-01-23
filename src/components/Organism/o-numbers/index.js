@@ -28,8 +28,9 @@ function ONumbers({stats}) {
         <Container className='o-numbers'>
             <Row>
                 <Col>
+
                     <MCard 
-                        title={'My Nodes'} 
+                        title={'20 CRN / Node'}
                         content={`${countNodes}/${maxNodes} max nodes`}
                         button = <Buy/>
                     />
@@ -44,7 +45,7 @@ function ONumbers({stats}) {
 
                 <Col>
                     <MCard 
-                        title={'My Rewards'} 
+                        title={'Rewards Per Day'}
                         content={`${totalCro} CRN`} 
                         button=<ClaimAll/>
                     />
