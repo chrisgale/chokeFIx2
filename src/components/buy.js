@@ -25,6 +25,7 @@ export const Buy = () => {
 
         if (account){
             if (itemName){
+                if (itemName.length > 5) {
                 const userBalance = await contract.methods.balanceOf(account).call()
                 console.log(userBalance)
                 const nodePrice = await contract.methods.getNodePrice().call()
@@ -33,6 +34,9 @@ export const Buy = () => {
                     return contract.methods.createNodeWithTokens(itemName).send({from: account})
                 } else {
                 alert("Not enough tokens")
+                }
+                } else {
+                    alert("Needs to be longer then 5 characters")
                 }
             } else {
                 alert("No name selected")
