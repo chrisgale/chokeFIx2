@@ -13,13 +13,17 @@ function ONumbers({stats}) {
 
     var countNodes = 0;
     var totalNodes = 0;
-    var totalCro = 0;
+    var rewards = 0;
+    var days = 0;
 
     if (stats) {
         countNodes = stats[0];
 
         totalNodes = stats[1];
-        totalCro = stats[2];
+        rewards = stats[2];
+        days = stats[3]
+        // rewards = totalNodes * multiplier * days
+        // days = (blocksStaked - (blocksStaked % 14400)) / 14400
     }
     const maxNodes = 100;
 
@@ -37,7 +41,7 @@ function ONumbers({stats}) {
                 </Col>
                 <Col>
                     <MCard 
-                        title={'Total Nodes'} 
+                        title={'Total Created'}
                         content={`${totalNodes} Total Nodes`}
                         button={false} 
                     />
@@ -45,8 +49,8 @@ function ONumbers({stats}) {
 
                 <Col>
                     <MCard 
-                        title={'Rewards Per Day'}
-                        content={`${totalCro} CRN`} 
+                        title={`${days} days unclaimed`}
+                        content={`${rewards} CRN`}
                         button=<ClaimAll/>
                     />
                 </Col>

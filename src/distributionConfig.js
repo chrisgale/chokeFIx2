@@ -1,4 +1,4 @@
-export const DISTRIBUTION_ADDRESS = "0x8a7AB8a3841bF1c386e06cbB7eb41F41DC7B8810"
+export const DISTRIBUTION_ADDRESS = "0xb0Dd5606A1201992E354Fc820101DB23113744Ef"
 
 export const DISTRIBUTION_ABI = [
 	{
@@ -134,6 +134,25 @@ export const DISTRIBUTION_ABI = [
 		],
 		"name": "UserClaimedRewards",
 		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "UserExtraBlocks",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
 	},
 	{
 		"inputs": [

@@ -2,6 +2,7 @@ import { useEthers } from "@usedapp/core";
 import React, { useEffect, useState } from "react";
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from "../config.js";
 import { NODE_ABI, NODE_ADDRESS } from "../nodeManageConfig.js";
+import { DISTRIBUTION_ABI, DISTRIBUTION_ADDRESS} from "../distributionConfig.js";
 import Web3 from "web3";
 import ONumbers from "./Organism/o-numbers";
 import "./Organism/o-numbers/style.scss";
@@ -20,21 +21,26 @@ export const UsersNumbers = () => {
     contract.setProvider(web3.givenProvider);
     const node_contract = new web3.eth.Contract(NODE_ABI, NODE_ADDRESS);
     node_contract.setProvider(web3.givenProvider);
+    const distributionContract = new web3.eth.Contract(DISTRIBUTION_ABI, DISTRIBUTION_ADDRESS);
+    distributionContract.setProvider(web3.givenProvider);
     const newitems = [];
-    const numberOfNodes = await contract.methods
-      .getNodeNumberOf(account)
-      .call();
+    const numberOfNodes = await contract.methods.getNodeNumberOf(account).call();
 
     const totalNodes = await contract.methods.getTotalCreatedNodes().call();
+    const daysStaked = await distributionContract.methods.getLastClaimedBlock(account).call();
+
+    const days = (daysStaked - (daysStaked % 14400)) / 14400
+    console.log(days)
 
 
-    const rewards = numberOfNodes * 1;
+    const rewards = numberOfNodes * 1 * days;
 
 
 
     newitems.push(String(numberOfNodes));
     newitems.push(String(totalNodes));
     newitems.push(String(rewards));
+    newitems.push(String(days));
 
     setStats(newitems);
   };
