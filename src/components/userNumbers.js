@@ -28,9 +28,12 @@ export const UsersNumbers = () => {
 
     const totalNodes = await contract.methods.getTotalCreatedNodes().call();
     const daysStaked = await distributionContract.methods.getLastClaimedBlock(account).call();
+    const days = 0
+    if (daysStaked > 0) {
 
     const days = (daysStaked - (daysStaked % 14400)) / 14400
     console.log(days)
+    }
 
 
     const rewards = numberOfNodes * 1 * days;
