@@ -28,10 +28,12 @@ export const UsersNumbers = () => {
 
     const totalNodes = await contract.methods.getTotalCreatedNodes().call();
     const daysStaked = await distributionContract.methods.getLastClaimedBlock(account).call();
-    const days = 0
-    if (daysStaked > 0) {
+    var days = 0;
+    const now = await web3.eth.getBlockNumber()
+    const realDays = (now - daysStaked);
+    if (realDays > 0) {
 
-    const days = (daysStaked - (daysStaked % 14400)) / 14400
+    days = (realDays - (realDays % 14400)) / 14400
     console.log(days)
     }
 
