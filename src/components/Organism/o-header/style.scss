@@ -1,7 +1,7 @@
 .MHeader {
     margin: 20px 0;
 
-    .logo {
+    .logoHead {
         width: 170px;
     }
 
@@ -22,5 +22,63 @@
 
 }
 
+.menuItems, a{
+    text-decoration: none;
+    color: var(--app-primary-text-color);
+    font-weight: 800;
+    font-size: .9rem;
+    margin: auto;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a:hover{
+    color: #81aaf0;
+}
+
+.logo2{
+    display: none;
+}
+
+#mobileMenu{
+    display: none;
+}
+
+.menuLogo{
+    color:#071226;
+}
+
+@media screen and (max-width:480px){
+.menuItems{
+    display: none;
+}
+
+.logoHead{
+    display: none;
+}
+
+.logo2{
+    display: block;
+    width: 50px;
+}
+
+.drop-btn{
+    background-color: #fff !important;
+    border-radius: 50px;
+    height: 30px;
+    align-content: center;
+    justify-content: center;
+}
 
 
+#mobileMenu{
+    display:block;
+    margin-left: -20px;
+    margin-right: 20px;
+    
+
+}
+
+
+}

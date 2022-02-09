@@ -26,15 +26,26 @@ export const Buy = () => {
         if (account){
             if (itemName){
                 if (itemName.length > 5) {
-                const userBalance = await contract.methods.balanceOf(account).call()
-                console.log(userBalance)
-                const nodePrice = await contract.methods.getNodePrice().call()
-                console.log(nodePrice)
-                if (Number(userBalance) >= Number(nodePrice)){
-                    return contract.methods.createNodeWithTokens(itemName).send({from: account})
-                } else {
-                alert("Not enough tokens")
-                }
+                    if (itemName.includes("#")) {
+                        alert("No # allowed")
+                    } else {
+                        const userBalance = await contract.methods.balanceOf(account).call()
+                        console.log(userBalance)
+                        const nodePrice = await contract.methods.getNodePrice().call()
+                        console.log(nodePrice)
+                        if (Number(userBalance) >= Number(nodePrice)){
+                            const userNumberOfNodes = await contract.methods.getNodeNumberOf(account).call()
+                            console.log(userNumberOfNodes)
+                            if (Number(userNumberOfNodes) === 0) {
+                                alert("Please hit claim after making the first node, the amount shown is a bug and hitting claim will fix it!")
+                            }
+
+                            return contract.methods.createNodeWithTokens(itemName).send({from: account})
+                        } else {
+                        alert("Not enough tokens")
+                        }
+                    }
+
                 } else {
                     alert("Needs to be longer then 5 characters")
                 }

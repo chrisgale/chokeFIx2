@@ -68,3 +68,15 @@
         }
     }
 }
+
+@media only screen and (max-width: 480px) {
+
+    .m-table{
+        width: 395px;
+    }
+    
+    .title{
+        margin-top: 40px !important;
+    }
+    
+    }

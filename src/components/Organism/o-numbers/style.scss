@@ -21,8 +21,25 @@
     }
 }
 
-@media only screen and (max-width: 425px) {
-    .disclaimer {
-        margin-top: 10px !important;
+@media only screen and (max-width: 480px) {
+
+    .disclaimer{
+        display: block;
+        height:10px;
+        display: none;
+    }
+
+    .o-numbers{
+        display: flex;
+        margin-top: -10px;
+    }
+
+    .card-body{
+        width: 350px;
+       
+    }
+
+    .card-title{
+        margin-top: 20px !important;
     }
 }

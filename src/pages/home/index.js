@@ -1,7 +1,6 @@
 import "./style.scss";
 import OHeader from "../../components/Organism/o-header";
 
-import OCoins from "../../components/Organism/o-coins";
 import OWhatNow from "../../components/Organism/o-what-now";
 import OStillHelp from "../../components/Organism/o-still-help";
 import OFooter from "../../components/Organism/o-footer";
@@ -14,8 +13,6 @@ function Home() {
       <OHeader />
 
       <UsersNumbers />
-
-      <OCoins />
 
       <UsersNodes />
 
