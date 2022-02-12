@@ -30,7 +30,7 @@ function OHeader() {
                 </Dropdown.Toggle>
                     <DropdownMenu className="dropdown-menu">
                       <DropdownItem href="https://cronodes.xyz">HOME</DropdownItem>
-                      <DropdownItem href="#">NFT (Coming Soon)</DropdownItem>
+                      <DropdownItem href="https://nft.cronodes.app/">NFT</DropdownItem>
                       <DropdownItem href="https://www.coingecko.com/en/coins/cronodes">CHART</DropdownItem>
                     </DropdownMenu>
             </Dropdown>
