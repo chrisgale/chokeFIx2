@@ -39,7 +39,7 @@ function OHeader() {
 
               <div className='menuItems'>
                 <a href="https://cronodes.xyz" target="_blank" rel="noreferrer noopener">HOME</a>
-                <a href='/'>NFT (Coming Soon)</a>
+                <a href='https://nft.cronodes.app/'>NFT</a>
                 <a href="https://dexscreener.com/cronos/0x3ca50d07b1cfb4a4e61ee8d00c2ef1af6e42cee8" target="_blank" rel="noreferrer noopener">CHART</a>
               </div>
 
