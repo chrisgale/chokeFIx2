@@ -1,4 +1,4 @@
-export const DISTRIBUTION_ADDRESS = "0xb0Dd5606A1201992E354Fc820101DB23113744Ef"
+export const DISTRIBUTION_ADDRESS = "0x6aD4Ff63fD7CF6672eE33Cdad8e3EE14Bad52B4E"
 
 export const DISTRIBUTION_ABI = [
 	{
@@ -11,6 +11,16 @@ export const DISTRIBUTION_ABI = [
 			{
 				"internalType": "contract CroNode",
 				"name": "_croToken",
+				"type": "address"
+			},
+			{
+				"internalType": "contract Distribution",
+				"name": "_distro",
+				"type": "address"
+			},
+			{
+				"internalType": "contract CroNodeFTFix",
+				"name": "_nft",
 				"type": "address"
 			},
 			{
@@ -134,6 +144,25 @@ export const DISTRIBUTION_ABI = [
 		],
 		"name": "UserClaimedRewards",
 		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "HasClaimed",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
 	},
 	{
 		"inputs": [
